@@ -1,0 +1,303 @@
+/* Загальні стилі для всіх посилань */
+a {
+  text-decoration: none;  /* Відміна стандартного оформлення гіперпосилань */
+  color: rgb(255, 255, 255);  /* Білий колір тексту */
+}
+
+/* Зміна кольору тексту при наведенні курсору на посилання */
+a:hover {
+  color: rgb(38, 42, 47);  /* Темно-сірий колір тексту при наведенні курсору */
+}
+
+/* Загальні стилі для всіх елементів на сторінці */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;  /* Встановлення шрифту для всіх текстових елементів */
+}
+
+/* Стилі для тіла документа */
+body {
+  background: rgb(68, 135, 222);  /* Фоновий колір тіла документа */
+  font-size: 14px;
+  line-height: 22px;
+  color: rgb(68, 135, 222);  /* Колір тексту у тілі документа */
+}
+
+/* Стилі для тексту з важливою інформацією (жирний) */
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;  /* Зміна регістру на великі літери */
+}
+
+/* Стилі для тексту з половинним жирністю */
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Стилі для розділу резюме */
+.resume {
+  width: 900px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;  /* Вирівнювання резюме по центру сторінки */
+}
+
+/* Ліва частина резюме з профілем і вміннями */
+.resume .resume_left {
+  width: 300px;
+  background: #0bb5f4;  /* Фоновий колір лівої частини резюме */
+}
+
+/* Профіль в лівій частині резюме */
+.resume .resume_left .resume_profile {
+  width: 100%;
+  height: 300px;
+}
+
+/* Зображення профілю в лівій частині резюме */
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Загальна внутрішня область лівої частини резюме */
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+
+/* Заголовок резюме */
+.resume .title {
+  margin-bottom: 20px;
+}
+
+/* Стилі для жирного тексту в лівій частині резюме */
+.resume .resume_left .bold {
+  color: #fff;  /* Білий колір тексту */
+}
+
+/* Стилі для звичайного тексту в лівій частині резюме */
+.resume .resume_left .regular {
+  color: #b1eaff;  /* Колір тексту */
+}
+
+/* Стилі для елементів резюме */
+.resume .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #b1eaff;  /* Лінія між елементами резюме */
+}
+
+/* Видалення лінії після останнього елементу резюме */
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+/* Стилі для списку елементів у лівій частині резюме */
+.resume .resume_left ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Видалення маркерів списку перед елементами */
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Стилі для іконок у списку лівої частини резюме */
+.resume .resume_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;  /* Фоновий колір іконок */
+  color: #0bb5f4;  /* Колір іконок */
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+/* Позиціонування іконок у списку лівої частини резюме */
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Стилі для тексту з даними в лівій частині резюме */
+.resume .resume_left ul li .data {
+  color: #b1eaff;  /* Колір тексту */
+}
+
+/* Стилі для списку вмінь у лівій частині резюме */
+.resume .resume_left .resume_skills ul li {
+  display: flex;
+  margin-bottom: 10px;
+  color: #b1eaff;  /* Колір тексту */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ширина для назви вміння у списку лівої частини резюме */
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 25%;
+}
+
+/* Ширина для прогрес-смужки у списку лівої частини резюме */
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 5px;
+  background: #009fd9;  /* Колір прогрес-смужки */
+  position: relative;
+}
+
+/* Ширина для відсоткового значення у списку лівої частини резюме */
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+}
+
+/* Стилі для тексту прогрес-смужки у списку лівої частини резюме */
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;  /* Колір тексту прогрес-смужки */
+}
+
+/* Стилі для тексту соціальних мереж у лівій частині резюме */
+.resume .resume_left .resume_social .semi-bold {
+  color: #fff;  /* Білий колір тексту */
+  margin-bottom: 3px;
+}
+
+/* Права частина резюме з роботою, освітою та хобі */
+.resume .resume_right {
+  width: 520px;
+  background: #fff;  /* Фоновий колір правої частини резюме */
+  padding: 25px;  /* Внутрішні відступи */
+}
+
+/* Жирний текст у правій частині резюме */
+.resume .resume_right .bold {
+  color: #0bb5f4;  /* Колір тексту */
+}
+
+/* Стилі для списку роботи та освіти в правій частині резюме */
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;  /* Приховане переповнення */
+}
+
+/* Позначка перед кожним елементом списку роботи та освіти */
+.resume .resume_right ul li {
+  position: relative;
+}
+
+/* Дата в правому списку роботи та освіти */
+.resume .resume_right ul li .date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Інформація про роботу та освіту в правому списку роботи та освіти */
+.resume .resume_right ul li .info {
+  margin-bottom: 20px;
+}
+
+/* Видалення відступу після останнього елемента інформації у списку */
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+/* Позначка і лінія перед кожним елементом списку роботи та освіти */
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #0bb5f4;  /* Колір позначки */
+}
+
+/* Позначка після кожного елемента списку роботи та освіти */
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 115px;
+  background: #0bb5f4;  /* Колір лінії */
+}
+
+/* Стилі для списку хобі в правій частині резюме */
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Стилі для елементів хобі в правій частині резюме */
+.resume .resume_right .resume_hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #0bb5f4;  /* Колір рамки */
+  border-radius: 50%;
+  position: relative;
+  color: #0bb5f4;  /* Колір тексту */
+}
+
+/* Стилі для іконок хобі в правій частині резюме */
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+
+/* Лінія перед кожним елементом хобі в правій частині резюме */
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -52px;
+  width: 50px;
+  height: 2px;
+  background: #0bb5f4;  /* Колір лінії */
+}
+
+/* Відсутність лінії після останнього елемента хобі в правій частині резюме */
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+
+/* Кнопка "Повернутися наверх" */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  background-color: #232b33;  /* Колір фону кнопки */
+  color: #fff;  /* Колір тексту кнопки */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+/* Зміна прозорості кнопки при наведенні */
+#scrollToTopBtn:hover {
+  opacity: 1;
+}
